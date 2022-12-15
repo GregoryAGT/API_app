@@ -1,0 +1,12 @@
+<div class="container my-5">
+    <h1>Rick and Morty (Characters)</h1>
+    <hr>
+    <input type="text" class="form-control" placeholder="Searh..." (input)="filter($event)">
+
+    <div class="row">
+        <div *ngFor="let character of characters" 
+              class="col-xl-4 col-sm-6 col-xs-12">
+            <app-card [character]="character"></app-card>
+        </div>
+    </div>
+</div>
